@@ -13,7 +13,7 @@
     <a href="/">もう一回診断する</a>
     <br><br>
 <a
-  href="https://twitter.com/intent/tweet?text=私の今日の寿司ネタは『<%= URI.encode_www_form_component(@sushi) %>』でした！🍣&hashtags=寿司診断"
+  href="https://twitter.com/intent/tweet?text=<%= URI.encode_www_form_component("私の今日の寿司ネタは『#{@sushi[:name]}』！#{@sushi[:comment]} 🍣") %>&hashtags=寿司診断"
   target="_blank"
 >
   🐟 Xでシェアする
